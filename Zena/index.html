@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENA - Gesture Controlled Assistant</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🖐️ ZENA – Gesture Controlled Assistant</h1>
+
+    <div class="container">
+        <video class="input_video" autoplay muted playsinline></video>
+        <canvas class="output_canvas" width="640" height="480"></canvas>
+        <div class="status">Status: <span id="gesture-status">Waiting...</span></div>
+    </div>
+
+    <!-- Gesture Guide Section -->
+    <section class="guide">
+        <div class="card">
+            <h3>✋ Zoom In</h3>
+            <p>Spread thumb and index finger apart to zoom in.</p>
+        </div>
+        <div class="card">
+            <h3>🤏 Zoom Out</h3>
+            <p>Bring thumb and index finger closer to zoom out.</p>
+        </div>
+        <div class="card">
+            <h3>☝️ Scroll Up</h3>
+            <p>Move your hand upward to scroll the page up.</p>
+        </div>
+        <div class="card">
+            <h3>👇 Scroll Down</h3>
+            <p>Move your hand downward to scroll the page down.</p>
+        </div>
+        <div class="card">
+            <h3>👉 Next Tab</h3>
+            <p>Swipe your hand to the right to move to the next tab.</p>
+        </div>
+        <div class="card">
+            <h3>👈 Previous Tab</h3>
+            <p>Swipe your hand to the left to move to the previous tab.</p>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="tabs">
+        <div class="tab active" id="tab1">
+            <h2>🏠 Home</h2>
+            <p>Welcome to ZENA, your AI-powered gesture assistant. Use your hand to control this page without touching
+                your mouse or keyboard!</p>
+            <p>Try using gestures to zoom in/out, scroll through this page, or switch between tabs.</p>
+        </div>
+
+        <div class="tab" id="tab2">
+            <h2>🖼️ Gallery</h2>
+            <p>Here’s some scrollable content for testing the scroll gestures:</p>
+            <div class="gallery">
+                <div class="gallery-item">Image 1</div>
+                <div class="gallery-item">Image 2</div>
+                <div class="gallery-item">Image 3</div>
+                <div class="gallery-item">Image 4</div>
+                <div class="gallery-item">Image 5</div>
+                <div class="gallery-item">Image 6</div>
+            </div>
+        </div>
+
+        <div class="tab" id="tab3">
+            <h2>ℹ️ About</h2>
+            <p>ZENA (Zero-touch ENhanced Assistant) is an AI-powered gesture recognition system built using MediaPipe
+                Hands and JavaScript.</p>
+            <p>It demonstrates real-time hand tracking, gesture-based control, and human-computer interaction through
+                intuitive motion commands.</p>
+            <p>Developed as part of an academic project to explore touchless accessibility and natural user interfaces.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 ZENA - Gesture AI Assistant | Designed for Human-Computer Interaction
+    </footer>
+
+    <!-- MediaPipe + Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
