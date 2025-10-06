@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENA - Gesture Controlled Assistant</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🖐️ ZENA – Gesture Controlled Assistant</h1>
+
+    <div class="container">
+        <video class="input_video" autoplay muted playsinline></video>
+        <canvas class="output_canvas" width="640" height="480"></canvas>
+        <div class="status">Status: <span id="gesture-status">Waiting...</span></div>
+    </div>
+
+    <!-- Gesture Guide Section -->
+    <section class="guide">
+        <div class="card">
+            <h3>✋ Zoom In</h3>
+            <p>Spread your thumb and index finger apart to zoom in.</p>
+        </div>
+        <div class="card">
+            <h3>🤏 Zoom Out</h3>
+            <p>Bring your thumb and index finger closer to zoom out.</p>
+        </div>
+        <div class="card">
+            <h3>☝️ Scroll Up</h3>
+            <p>Move your hand upward to scroll the page up.</p>
+        </div>
+        <div class="card">
+            <h3>👇 Scroll Down</h3>
+            <p>Move your hand downward to scroll the page down.</p>
+        </div>
+        <div class="card">
+            <h3>🖐️ Open Palm</h3>
+            <p>Show an open palm to open <strong>Atharva College Of Engineering</strong>.</p>
+        </div>
+        <div class="card">
+            <h3>✌️ Peace Sign</h3>
+            <p>Show a peace sign to open the <strong>Youtube</strong></p>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>ℹ️ About ZENA</h2>
+        <p>
+            ZENA (Zero-touch ENhanced Assistant) is an AI-powered gesture recognition system built using
+            <strong>MediaPipe Hands</strong> and <strong>JavaScript</strong>.
+        </p>
+        <p>
+            It allows you to interact with your computer naturally — through hand gestures — for actions like zooming,
+            scrolling, and opening websites, all without touching a mouse or keyboard.
+        </p>
+        <p>
+            Developed as part of an academic project at <strong>Atharva College of Engineering</strong> to explore
+            touchless accessibility and natural user interfaces.
+        </p>
+    </section>
+
+    <footer>
+        © 2025 ZENA - Gesture AI Assistant | Built for Human-Computer Interaction
+    </footer>
+
+    <!-- MediaPipe + Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

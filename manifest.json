@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "ZENA - Gesture Controlled Assistant",
+    "version": "1.0",
+    "description": "Control websites using hand gestures — Zoom, Scroll, and Open YouTube or Atharva College site.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_title": "ZENA Gesture Assistant"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "mediapipe/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
